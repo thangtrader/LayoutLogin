@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">LayoutLogin</string>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    </style>
 </resources>

@@ -2,9 +2,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/login"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg"
     android:gravity="center"
     android:padding="16dp"
     tools:context=".MainActivity">
@@ -18,24 +19,24 @@
             android:layout_height="160dp"
             android:src="@drawable/baseline_account_circle_24">
         </ImageView>
+
         <EditText
             android:id="@+id/edt_email"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:minHeight="48dp"
             android:layout_margin="8dp"
-            android:hint="Email"
-            android:inputType="textEmailAddress">
-        </EditText>
+            android:hint="Nguyễn Đức Thắng"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"></EditText>
+
         <EditText
             android:id="@+id/edt_password"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:minHeight="48dp"
             android:layout_margin="8dp"
-            android:hint="Password"
-            android:inputType="textPassword">
-        </EditText>
+            android:hint="22115053122337"
+            android:inputType="textPassword"
+            android:minHeight="48dp"></EditText>
         <Button
             android:id="@+id/btn_login"
             android:layout_width="match_parent"
@@ -43,32 +44,49 @@
             android:layout_margin="10dp"
             android:text="Login">
         </Button>
-        <TextView
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="44dp"
+            android:gravity="center"
             android:orientation="horizontal"
-            android:text="Social Login"
-            android:textSize="18dp"
-            android:gravity="center">
-        </TextView>
+            android:textAlignment="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bạn chưa có tài khoản? ">
+            </TextView>
+            <TextView
+                android:id="@+id/tv_signup"
+                android:layout_width="135dp"
+                android:layout_height="wrap_content"
+                android:text="Đăng ký ngay"
+                android:textColor="@color/colorRed">
+            </TextView>
+        </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginTop="8dp"
             android:gravity="center">
-            <ImageView
-                android:layout_width="64dp"
-                android:layout_height="64dp"
+
+            <Button
+                android:id="@+id/btn_gg"
+                android:layout_width="147dp"
+                android:layout_height="59dp"
                 android:layout_margin="16dp"
-                android:src="@drawable/fb">
-            </ImageView>
-            <ImageView
-                android:layout_width="64dp"
-                android:layout_height="64dp"
+                android:drawableLeft="@drawable/google"
+                android:text="Google"></Button>
+
+            <Button
+                android:id="@+id/btn_fb"
+                android:layout_width="wrap_content"
+                android:layout_height="59dp"
                 android:layout_margin="16dp"
-                android:src="@drawable/ig">
-            </ImageView>
+                android:drawableLeft="@drawable/facebook"
+                android:text="Faceboock"></Button>
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>
